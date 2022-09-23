@@ -23,7 +23,7 @@ OPS SUMMARY
     - use .choice on the list corresponding to that key
 '''
 import random as rng
-krewes = {2:['a','b','c'], 7:['y','z'], 8:['j', 'k', 'l']}
+krewes = {2:['rlau','hwang'], 7:['jkwok','kli', 'llee'], 8:['shaque', 'sching']}
 
 def choose():
     #using randint
@@ -31,6 +31,7 @@ def choose():
     period = rng.randint(0,len(keys))
     devo = rng.randint(0, len(krewes[period]))
     return [krewes[period][devo]] #fix the list thing
+
     #using random
 
 
