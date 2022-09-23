@@ -15,7 +15,7 @@ OPS SUMMARY
     Randint:
     - Get a list of the keys in krewes
     - Take the value at a random index from 0 to 2 of the list of keys
-    - Use that key to access the corresponding list and then return the devo at a random index from 0 to 1 less than the length of the list
+    - Use that key to access the corresponding list and then return the devo at a random index from 0 to the length of the list - 1
     Random:
     - Same as above but using .random and typecasting instead of randint
     Choice:
@@ -30,22 +30,31 @@ krewes = {2:["NICHOLAS",  "ANTHONY",  "BRIAN",  "SAMUEL",  "JULIA",  "YUSHA",  "
 
 def choose():
     #using randint
-    #keys = list(krewes)
-    #period = rng.randint(0,len(keys)-1) 
-    #period = keys[period] #randomly selects the period
-    #devo = rng.randint(0, len(krewes[period])-1) #randomly selects the devo
-    #return krewes[period][devo]
+    
+    keys = list(krewes)
+    period = rng.randint(0,len(keys)-1) 
+    period = keys[period] #randomly selects the period
+    devo = rng.randint(0, len(krewes[period])-1) #randomly selects the devo
+    devo = krewes[period][devo]
+    
 
     #using random
-    #keys = list(krewes)
-    #period = krewes[keys[int(rng.random()*2)]]
-    #devo = period[int(rng.random()*len(period))]
-    #return devo
+    '''
+    keys = list(krewes)
+    period = keys[int(rng.random()*2)]
+    classlist = krewes[keys[int(rng.random()*2)]]
+    devo = classlist[int(rng.random()*len(classlist))]
+    '''
 
+    '''
     #using choice
     period = rng.choice([2,7,8]) #choose a random key
     devo = rng.choice(krewes[period]) #choose a random index of the list that corresponds with the chosen key
-    return devo
+    '''
+
+    output = devo + " from period " + str(period)
+    return output
 
 print(choose())
+
 
