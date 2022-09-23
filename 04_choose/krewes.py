@@ -27,13 +27,16 @@ krewes = {2:['rlau','hwang'], 7:['jkwok','kli', 'llee'], 8:['shaque', 'sching']}
 
 def choose():
     #using randint
-    keys = list(krewes)
-    period = rng.randint(0,len(keys))
-    devo = rng.randint(0, len(krewes[period]))
-    return [krewes[period][devo]] #fix the list thing
+    #keys = list(krewes)
+    #period = rng.randint(0,len(keys))
+    #devo = rng.randint(0, len(krewes[period]))
+    #return [krewes[period][devo]] #fix the list thing
 
     #using random
-
+    keys = list(krewes)
+    period = krewes[keys[int(rng.random()*2)]]
+    devo = period[int(rng.random()*len(period))]
+    return devo
 
     #using choice
     #period = rng.choice([2,7,8]) #choose a random key
