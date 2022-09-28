@@ -41,9 +41,9 @@ def choose():
     #using random
     '''
     keys = list(krewes)
-    period = keys[int(rng.random()*2)]
-    classlist = krewes[keys[int(rng.random()*2)]]
-    devo = classlist[int(rng.random()*len(classlist))]
+    period = keys[int(rng.random()*3)]
+    classlist = krewes[period]
+    devo = classlist[int(rng.random()*len(classlist)+1)]
     '''
 
     '''
