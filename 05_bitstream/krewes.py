@@ -29,25 +29,26 @@ krewes = {2:["NICHOLAS",  "ANTHONY",  "BRIAN",  "SAMUEL",  "JULIA",  "YUSHA",  "
             8:["ALEKSANDRA",  "NAKIB",  "AMEER",  "HENRY",  "DONALD",  "YAT LONG",  "SEBASTIAN",  "DAVID",  "YUKI",  "SHAFIUL",  "DANIEL",  "SELENA",  "JOSEPH",  "SHINJI",  "RYAN",  "APRIL",  "ERICA",  "JIAN HONG",  "VERIT",  "JOSHUA",  "WILSON",  "AAHAN",  "GORDON",  "JUSTIN",  "MAYA",  "FAIYAZ",  "SHREYA",  "ERIC",  "JEFFERY",  "BRIAN",  "KEVIN",  "SAMSON",  "BRIAN",  "HARRY",  "wanying"]
          }
 
-def mkDict():
+def mk_dict():
     krewes = open("krewes.txt").read() #read file into a string
     people = krewes.split("@@@") #splits string by each person
 
     #creates the dictionary
-    Dict = {}
-    Dict[2] = []
-    Dict[7] = []
-    Dict[8] = []
+    class_list = {}
+    class_list[2] = []
+    class_list[7] = []
+    class_list[8] = []
 
     for x in people:
         attributes = x.split('$$$') ##splits each person into their pd, name, and ducky
-        Dict[int(attributes.pop(0))].append(attributes) #append person and their ducky to right period
+        class_list[int(attributes.pop(0))].append(attributes) #append person and their ducky to right period
 
-    return Dict
+    return class_list
 
 def choose():
     #using choice
-    krewes = mkDict()
+    krewes = mk_dict()
+    print(krewes)
 
     period = rng.choice(list(krewes)) #choose a random key
     devo = rng.choice(krewes[period]) #choose a random index of the list that corresponds with the chosen key
