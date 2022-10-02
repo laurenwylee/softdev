@@ -2,19 +2,26 @@
 wille -- Lauren Lee & Marc Jiang
 SoftDev
 k06: StI/O: Divine your Destiny!
-2022-09-29
-time spent:  hr
+2022-10-1
+time spent: 0.5 hr
 
 DISCO:
+- random.choices() can automatically choose based on a desired probability as opposed to 
+- we don't need to order the values of the dictionary for our algorithm to work 
+- rsplit() splits from right
+- rng.uniform() generates random float between an interval 
 
 QCC
- 
-HOW THIS SCRIPT WORKS
+- whats the best way to test?
 
+HOW THIS SCRIPT WORKS
+-This script works by randomly generating a value from 0 to the total odds of each job. 
+We then subtract the chances of each job starting from the top of the csv to the bottom from the randomly generated value until it reaches 0 or below. 
+-The job that corresponds to the value that made the randomly generated value 0 or below is the job that is selected 
 '''
 import random as rng
 
-occupation = open("occupations.csv").read() #reading the csv file into a string
+occupation = open("test.csv").read() #reading the csv file into a string
 
 occupation = occupation.split("\n") #split each new line 
 occupation.pop(0) #delete the heading
@@ -33,15 +40,8 @@ for x in range(0, len(vals)):
     vals[x] = float(vals[x])
 
 def choose():
-    #order dictionary in descending order of values
-    vals.sort(reverse = True)
     sort_jobs = {}
-    for x in vals:
-        for key in jobs:
-            if float(jobs[key]) == x:
-                sort_jobs[key] = x
-                del jobs[key]
-                break
+    sort_jobs = jobs
 
     #identify the total of all the values         
     sum = total.split(",")
@@ -53,7 +53,7 @@ def choose():
     #key of the last value to be subtracted is the outputed occupation!
     ret_val = ""
     for key in sort_jobs:
-        random = random - sort_jobs[key]
+        random = random - float(sort_jobs[key])
         if random <= 0 :
             return key
     return ret_val
