@@ -1,0 +1,7 @@
+v0:
+print -- in terminal
+return -- on webpage
+v1:
+no print -- nothing in terminal
+v2:
+can print multiple lines
