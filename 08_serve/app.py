@@ -1,9 +1,15 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2022
+'''
+Drowning Jelleyfish: Jing Feng, Emily Ortiz, Lauren Lee
+SoftDev
+K08 -- Putting it Together
+2022-10-06
+time spent: 1.5
+'''
 
 from flask import Flask
 import random as rng
+import csv
+
 app = Flask(__name__) #create instance of class Flask
 
 @app.route("/")       #assign fxn to route
@@ -17,27 +23,25 @@ def hello_world2():
     print("about to choose you PIKACHU!")
     return display()
 
-#read the csv one time in the script, reduce run time
-print("starting csv sorting")
-occupation = open("occupations.csv").read() #reading the csv file into a string
-print("opened csv file")
+with open("occupations.csv") as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter= ',') #reads csv
+    occupation = []
+    for row in csv_reader:
+        occupation.append(row) #each row is a list, add each list as an element in a larger list
 
-occupation = occupation.split("\n") #split each new line 
 occupation.pop(0) #delete the heading
-occupation.pop(len(occupation)-1) #delete the extra empty line
 total = occupation.pop(len(occupation)-1) #delete the total of the values and store value
 
 #create dictionary
 jobs = {}
 for x in occupation:
-    job = x.rsplit(",", 1)
     #imulaneously converting to float, and attaching link
-    jobs[job[0].replace("\"", "")] = [float(job[1]), "https://www.google.com/search?q=" + job[0].replace("\"", "")]
+    jobs[x[0].replace("\"", "")] = [float(x[1]), "https://www.google.com/search?q=" + x[0].replace("\"", "")]
 
 def choose():
     #identify the total of all the values         
-    sum = total.split(",")
-    sum = float(sum[1])
+    sum = total[1]
+    sum = float(sum)
     #generate a random number from 1 to the total
     random = round(rng.uniform(1,sum),1)
     
