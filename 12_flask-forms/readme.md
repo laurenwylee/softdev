@@ -1,8 +1,8 @@
-## Popeyes: Lauren Lee, Vivian Teo, Ian Jiang
-## SoftDev
-## K12 -- Take and Give
-## 2022-10-17
-## time spent: 0.5
+### Popeyes: Lauren Lee, Vivian Teo, Ian Jiang
+### SoftDev
+### K12 -- Take and Give
+### 2022-10-17
+### time spent: 0.5
 
 ### DISCO
 * GET request -- input in request.args
