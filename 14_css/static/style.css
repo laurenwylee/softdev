@@ -1,0 +1,42 @@
+body {
+    font-family: Arial;
+  
+  }
+  h1 {
+    background-color: rgb(202, 202, 202);
+    color: white;
+    margin:auto;
+    text-align: center;
+    length: 20%;
+    padding: 5px;
+  }
+  #body2 {
+    background-color: rgb(100,100,100);
+    padding: 5px;
+  
+  }
+  #middle {
+    background-color: rgb(140, 140, 140);
+  
+  
+  }
+  #main {
+    display: inline-block;
+    margin-left: auto;
+    vertical-align: top;
+    padding-left: 5%;
+  
+  }
+  #nav {
+    display: inline-block;
+    margin-right: auto;
+    padding-left: 1%;
+  
+  }
+  h4 {
+    color: white;
+  }
+  #copyright {
+    text-align: right;
+  }
+  
