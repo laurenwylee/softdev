@@ -1,0 +1,12 @@
+# POPEYES: Lauren Lee, Vivian Teo, Ian Jiang
+# SoftDev
+# K18_skeleton/stub :: SQLITE3 BASICS
+# 10/25/2022
+# time spent: 1.5 hours
+
+DictReader takes in a database/file, reads each column as a list of values associated with a key into a dictionary. 
+If you don't provide a fieldname parameters into DictReader, the first row of the database will become the keys.
+
+When you don't want to hard-code values into a SQL command, you can use an fstring or concatenate strings and variables together
+
+fetchall() and fetchone() return elements from a table

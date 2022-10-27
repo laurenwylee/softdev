@@ -1,7 +1,8 @@
-#Clyde "Thluffy" Sinclair
-#SoftDev
-#skeleton/stub :: SQLITE3 BASICS
-#Oct 2022
+# POPEYES: Lauren Lee, Vivian Teo, Ian Jiang
+# SoftDev
+# K18_skeleton/stub :: SQLITE3 BASICS
+# 10/25/2022
+# time spent: 1.5 hours
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
@@ -21,7 +22,7 @@ with open('students.csv', newline='') as csvfile:
         c.execute("INSERT INTO students VALUES ('" + row['name'] + "', " + row['age'] + "," + row['id'] + ")")
 
 students_table = c.execute("SELECT * FROM students")
-# print(students_table.fetchall())
+print(students_table.fetchall())
 
 # courses table
 DB_FILE="courses.db"
