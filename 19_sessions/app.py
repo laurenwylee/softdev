@@ -1,66 +1,56 @@
-# Clyde 'Thluffy' Sinclair
+# POPEYES: Lauren Lee, Vivian Teo, Ian Jiang
 # SoftDev
-# Oct 2022
+# K19 -- Sessions Greetings
+# 2022-11-03
+# time spent: 1.5
 
-from flask import Flask             #facilitate flask webserving
-from flask import render_template   #facilitate jinja templating
-from flask import request           #facilitate form submission
+
 
 #the conventional way:
-#from flask import Flask, render_template, request
+import re
+from flask import Flask, render_template, request
 
 app = Flask(__name__)    #create Flask object
 
-
-'''
-trioTASK:
-~~~~~~~~~~~ BEFORE RUNNING THIS, ~~~~~~~~~~~~~~~~~~
-...read for understanding all of the code below.
-Some will work as written; other sections will not. 
-TASK: Predict which...
-Devise some simple tests you can run to "take apart this engine," as it were.
-Execute your tests.
-Process results.
-
-PROTIP: Insert your own in-line comments
- wherever they will help
-  your future self and/or current teammates
-   understand what is going on.
-'''
+username = "POPEYES"
+password = "chicken"
+success = True
+exception = "username and pw wrong"
 
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
-    # print("\n\n\n")
-    # print("***DIAG: this Flask obj ***")
-    # print(app) 
-    # print("***DIAG: request obj ***")
-    # print(request)
-    # print("***DIAG: request.args ***")
-    # print(request.args) #prints ImmutableMultiDict([])
-    # #print("***DIAG: request.args['username']  ***")
-    # #print(request.args['username'])
-    # print("***DIAG: request.headers ***") 
-    # print(request.headers) #information on the computer making the request
-    return render_template( 'login.html' )
+    return render_template('login.html', exception = "")  
 
 
 @app.route("/auth") #, methods=['GET', 'POST'])
 def authenticate():
-    # print("\n\n\n")
-    # print("***DIAG: this Flask obj ***")
-    # print(app)
-    # print("***DIAG: request obj ***")
-    # print(request)
-    # print("***DIAG: request.args ***")
-    # print(request.args)
-    print("***DIAG: request.args['username']  ***")
-    print(request.args['username'])
+    try:
+        user = request.args['username']
+        pw = request.args['pass']
+        print(user)
+        print(pw)
+        if user != username:
+            print("first if")
+            
+            print("after first if")
+            success = False
+        if pw != password:
+            print("second if")
+            
+            success = False
+        print(exception)
+        if not success:
+            print("not success")
+            return render_template('login.html', message = exception)
+        else:
+            return render_template('response.html')
+    except:
+        print("*********" + request.args['username'])
+        return render_template('login.html', message = "Please try again")
 
-    print("***DIAG: request.args['pass']  ***")
-    print(request.args['pass'])
-    # print("***DIAG: request.headers ***")
-    # print(request.headers)
-    return render_template( 'response.html' ) #response to a form submission
+
+  
+
 
 
     
