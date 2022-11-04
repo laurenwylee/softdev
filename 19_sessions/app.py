@@ -8,46 +8,43 @@
 
 #the conventional way:
 import re
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 
 app = Flask(__name__)    #create Flask object
 
 username = "POPEYES"
 password = "chicken"
-success = True
 exception = "username and pw wrong"
 
 @app.route("/") #, methods=['GET', 'POST'])
 def disp_loginpage():
-    return render_template('login.html', exception = "")  
+    return render_template('login.html', message = "Type in a username and password")  
 
 
 @app.route("/auth") #, methods=['GET', 'POST'])
 def authenticate():
-    try:
-        user = request.args['username']
-        pw = request.args['pass']
-        print(user)
-        print(pw)
-        if user != username:
-            print("first if")
-            
-            print("after first if")
-            success = False
-        if pw != password:
-            print("second if")
-            
-            success = False
-        print(exception)
-        if not success:
-            print("not success")
-            return render_template('login.html', message = exception)
-        else:
-            return render_template('response.html')
-    except:
-        print("*********" + request.args['username'])
-        return render_template('login.html', message = "Please try again")
-
+    user = request.args['username']
+    pw = request.args['pass']
+    #pw and user correct
+    if username in  user and password in pw:
+        return render_template('response.html')
+    #empty pw or user
+    if "" == user and "" == pw:
+        return render_template('login.html', message = "Please type in a username and password")
+    elif "" == user:
+        return render_template('login.html', message = "Please type in a username")
+    elif "" == pw:
+        return render_template('login.html', message = "Please type in a password")
+    #wrong pw or user
+    if user != username and pw != password:
+        return render_template('login.html', message = "Please input a correct username and password")
+    elif user != username:
+        return render_template('login.html', message = "Please input a correct username")
+    elif pw != password:
+        return render_template('login.html', message = "Please input a correct password")
+    #unidentified error
+    else:
+        return render_template('login.html', message = "unidentified")
 
   
 
