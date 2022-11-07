@@ -1,33 +1,17 @@
-Drowning Jelleyfish: Lauren Lee, Emily Ortiz, Jing Feng
+POPEYES: Lauren Lee, Vivian Teo, Ian Jiang
 SoftDev
-K11 -- Form(s) Like Voltron
-2022-10-14
-time spent: 0.5
+K19 -- Sessions Greetings
+2022-11-03
+time spent: 3
 
-Predictions/Notable
-* request is a new thing we are importing
-* <form> tags in login.html
-* homepage of app.py will be a login screen
+DISCO:
+* Code within try blocks should be short and the except block should anticipate a specific error
+* redirect() instead of render_template() will redirect the user to a certain url
+* Start a session by generating a secret key and assigning a value to session['username']
+* End a session by doing session.pop() on the username
 
-DISCO
-* ImmutableMultiDict([]) is what stores the input.
-* Value after submission: ImmutableMultiDict([('username', 'drowning'), ('sub1', 'Submit Query')])
-* request.headers displays info abt machine doing the request
-* <form action="/auth"> links front and back end
-* uncommenting lines 40-41 leads to an error message on the home webpage:
+QCC:
+* We weren't sure how to use exception handling to anticipate errors. What errors were we supposed to anticipate and how would we use try and except guarantee no fails?
+* Is it possible to use GET requests with sessions?
+* Do we only need to create a session for 'username' and not 'pass'?
 
-  werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
-  KeyError: 'username'
-
-  we suspect this is happening because on the login page, no text has been submitted yet, so there is no value for the name "username"
-* uncommenting lines 56-57 doesn't cause an error, the inputted username is displayed in terminal
-* GET is easier to debug bc when importing form response, the result is in the URL
-* POST is harder to debug
-* URL with GET (not commented out): http://127.0.0.1:5000/auth?username=drowning&sub1=Submit+Query
-* URL without GET (commented out): http://127.0.0.1:5000/auth?username=drowning&sub1=Submit+Query
-* ^ URLs are the same
-
-Hypothesis
-* Flask/Python automatically uses GET bc even with GET and POST methods commented out, this displays in terminal when the home page is refreshed:
-
-  <insert message here>
