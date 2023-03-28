@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Copilot</title>
+</head>
+<body>
+    <h1>Github Copilot</h1>
+    <h3>Lauren Lee and Ian Jiang</h3>
+    <a href="https://github.com/features/copilot">Copilot</a>
+    <h3> What is Github Copilot? </h3>
+    <p>
+        Github Copilot is an AI pair programing partner powered by OpenAI Codex. Open AI Codex is a descendent of GPT-3 and is trained by data with both natural language and source code from public sources like public github repos. Because Codex is a descendant of GPT 3, it has a lot of the natural language capabilities of GPT 3 making it extremely useful in ways programmers can take advantage of the tool
+        Designers of Codex see coding in two steps:
+            <ol> 
+                <li>Breaking down the problem</li>
+                <li>Coding solutions to the problem using existing code from libraries and API</li>
+            </ol>
+        Because of the nature of this process, Copilot is designed to take both code and English prompts to output relevant responses. And since code is often built off other sources, Copilot takes advantage of this by browsing through relevant libraries, and APIs, and functions that already exist
+
+    </p>
+    <h3> How to use? </h3>
+    <p>
+        You can download the <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">vscode extension</a> which will give you it for free if you have the student pack. When you start coding, you will see autocomplete suggestions. Press tab to accept and esc to reject the sugestions. Use alt + [and alt +] to ccle through alternate suggestions. To show alternate suggestions in a separate tab, use ctrl + enter to see up to 10 different solutions. You can also write prompts in a comment and Copilot will suggest code to help you achieve your goal, and you can even ask questions to copilot and have them answer you. 
+    </p>
+    <h3> How does it work? </h3>
+    <p>
+        To create relevant responses, Copilot provides suggestions based on “context” – this context is provided by the code in your working file and all files open in VScode. This means it is parsing and using your code to provide suggestions.
+        <br> In the settings, there should be two main settings you should worry about:
+        <ol>
+            <li>
+                enabling/disabling duplication detection
+                <ul>
+                    <li>Copilot will compare the suggestion and your surrounding code to public repos on github and if there’s a match, the suggestion will not be shown.</li>
+                    <li>While this can help a lot if you are trying to avoid legal issues regarding open source licenses on code – it doesn’t prevent your code from matching other public sources</li>
+                </ul>
+            </li>
+            
+            <li>
+                enabling/disabling telemetry
+                <ul>
+                    <li>Allow github to collect and save code snippets</li>
+                    <li>If allowed, your code snippets will be further processed/shared with Microsoft and OpenAI</li>
+                </ul>
+            </li>
+        </ol>
+    </p>
+    <h3> Advantages </h3>
+    <p>
+        It's useful for quickly producing simple or repetitive code. Common example of this are test cases. Wide range of languages that it supports Code suggestions for JavaScript, TypeScript, Python, Ruby, Go, C#, C++, Perl, PHP, Swift, and Shell.
+    </p>
+    <h3> Disadvantages </h3>
+        Copilot is based on open sourced code which means if there is less code online in a language, version, or library, code suggestions will be less relevant and cause bugs. Even when coding in Python, we encountered numerous bugs and the suggested code consistently needed to be double checked. Additionally, Copilot can be risky to use if your teacher has not stipulated whether it is considered academic dishonesty. Even in the world of business, the use of Copilot has caused a lot of problems. 
+    <h4>Legal Controversy</h4>
+    <p>
+        Copilot has faced a recent lawsuit regarding the way it trains its AI on public repositories. Many developers post code under different open source liscences like MIT and GPL. The training of Copilot on public repositories means that suggestions can be similar to the open sourced code without attribution to the original owner. Github has responded with the argument that their Terms of Services state that no matter what license you use, github has the right to host your code and use your code to impove their products and features. Additionally, github argued that some uses of the AI has fair use since they can have transformative usage (Super broad). If this is true, all cases must be evaluated on a case by case basis. Overall, its important to pay attention to legal cases like these that will set the landscape for laws regarding the training of AI. 
+    </p>
+    <h3> Copilot Additions </h3>
+    <p>
+        Copilot Labs (alpha version) can explain code in plain language, translate code from one language to another, and apply different brushes to your code. Copilot Nightly (beta version) has newer releases of Copilot
+    </p>
+</body>
+</html>
