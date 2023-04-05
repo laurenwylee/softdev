@@ -1,0 +1,20 @@
+Team Dark Lord Chuckles the Silly Pig :: Lauren Lee, Thomas Zhang, Diana Akhmedova
+SoftDev pd7
+K27 -- Basic functions in JavaScript
+2023-04-03t
+
+DISCO
+-----------------------------------------------------------------
+* JavaScript uses the keyword "function" to denote a method.
+* JavaScript does not require variable types for function arguments.
+* You can use console.log() to print something in the terminal.
+* JavaScript has similar syntax to Java, like the semicolons and the curly brackets.
+=================================================================
+
+QCC
+-----------------------------------------------------------------
+* How is JavaScript similar to Scheme?
+=================================================================
+
+
+
