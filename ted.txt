@@ -1,0 +1,28 @@
+Lauren Lee
+
+
+PageRank
+James Yu's Group:
+    - defined backlink & forward link
+        - backlink is link pointing towards the Page
+        - forwardlink is link that is pointing out of the Page
+    - defined each element of the equation
+    - explainations were very articulate but some variables like c were unclear
+    - dangling links -- webapage without forward links --  pagerank removes pages w dangling links
+    - rank sink was very confusing -- still have trouble understanding the solution
+
+Talia + Jasmine:
+    - history lesson!!
+    - I'd like to learn more about the big o runtime
+    - avoiding the equation was actually more effective for explaining page rank
+    - highlighting made important points easy to locate
+
+
+DOM:
+- A DOM is the Document Object Model
+    - programming interface for web documents
+        - allows you to change the document structure, style and content
+        - rep document as nodes and objects so programming languages can interact w the page
+    - DOM is an API for manipulating DOM trees of HTML and XML documents -- API allows you to modify DOM tree
+- virtual DOM is like real DOM but more lightweight
+- in react, it updates the virtual DOM, compares to real DOM and only updates part of DOM needed
