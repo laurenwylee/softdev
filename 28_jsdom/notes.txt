@@ -1,0 +1,17 @@
+Team Dark Lord Chuckles the Silly Pig :: Lauren Lee, Thomas Zhang, Diana Akhmedova  
+SoftDev pd7
+K28 -- Getting more comfortable with the dev console and the DOM
+2023-04-05w
+
+DISCO:
+* console.log() displays a string in the console.
+* You don't need to specify the type of variable when declaring it.
+* Functions are assigned to variables.
+* classList.add("className") adds a class with the name "className".
+* document.getElementById("idName") get the element with the name "idName".
+* document.getElementsByTagName("tagName") gets the items with the <tagName>.
+* In both red() and stripe(), blue take precedent over red.
+
+QCC:
+* Why are the red() and stripe() functions not properly working? Is the blue class overriding the red class?
+* Why are the results different everytime for red() and stripe()?

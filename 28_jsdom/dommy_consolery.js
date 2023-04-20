@@ -57,7 +57,7 @@ var red = function() { // sets a variable red equal to a new function
 var stripe = function() { // sets a variable stripe equal to a new function
   var items = document.getElementsByTagName("li"); // gets the items with the <li> tag and sets them to a variable called items
   for(var i = 0; i < items.length; i++) { // for loop iterates from zero to the end of the ordered list
-    if (i%2==0){ // if i is divisble by 2,S
+    if (i%2==0){ // if i is divisble by 2,
       items[i].classList.add('red'); // adds a class named "red" to each item in the ordered list
     } else {
       items[i].classList.add('blue'); // otherwise, adds a class named "blue" to each item in the ordered list
