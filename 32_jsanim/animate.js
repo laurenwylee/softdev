@@ -8,10 +8,10 @@ var ctx = c.getContext("2d");
 
 ctx.fillStyle = "blue";
 
-var requestID; // init global var for use with animation frames
+var requestID; //init global var for use with animation frames
 
 var clear = function(e) {
-    //e.preventDefault(); //Q:whatdis?
+    //e.preventDefault(); //Q: Whatdis? A: Prevents the Animaniac and DVD buttons from running.
     ctx.clearRect(0, 0, 500, 500);
 }
 
@@ -42,42 +42,43 @@ var drawDot = () => {
     }
 }
 
-//600 width 400 height
-// how much is it displaced horizontally + vertically ?
-
 var dvdLogoSetup = function() {
+    clear();
     window.cancelAnimationFrame(requestID);
     
-    var rectWidth = 60; // ???
-    var rectHeight = 40; // ???
-    ctx.beginPath();
-    ctx.rect(100, 100, rectWidth, rectHeight);
-    ctx.fill();
-    ctx.stroke();
+    var rectWidth = 60; //width of the logo
+    var rectHeight = 40; //height of the logo
 
-    // var rectX = ; //construct for selecting random valid xcor
-    // var rectY = ; //construct for selecting random valid ycor
+    var rectX = Math.floor(Math.random() * c.width); //construct for selecting random valid xcor
+    var rectY = Math.floor(Math.random() * c.height); //construct for selecting random valid ycor
 
-    // var xVel = ; // ???
-    // var yVel = ; // ???
+    var xVel = -1; //initial x direction
+    var yVel = -1; //intial y direction
 
     var logo = new Image();
     logo.src = "logo_dvd.jpg";
 
-    // var dvdLogo = function() {
-    //     ctx.clearRect(0, 0, c.width, c.height);
-    //     //ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
-    //     ctx.drawImage(logo, rectX, rectY, rectWidth, rectHeight);
-    //     if ( /* bounce criteria */ ) {
-    //         xVel = ; // ???
-    //     }
-    //     if ( /* bounce criteria */ ) {
-    //         yVel = ; // ???
-    //     }
-    //     rectX = ; // ???
-    //     rectY = ; // ???
-    //     requestID = window.requestAnimationFrame( /* ??? */ );
-    // }
+    var dvdLogo = function() {
+        ctx.clearRect(0, 0, c.width, c.height);
+        //ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
+        ctx.drawImage(logo, rectX, rectY, rectWidth, rectHeight);
+        /* 
+            left: xVel neg -> pos
+            right: xVel pos -> neg
+            up: yVel neg -> pos
+            down: yVel pos -> neg
+        */
+        if ( rectX < 0 || rectX > (c.width - rectWidth)) {
+            xVel *= -1; //change x direction
+        }
+        if ( rectY < 0 || rectY > (c.height - rectHeight)) {
+            yVel *= -1; //change y direction
+        }
+        rectX += xVel; //add x velocity to x position
+        rectY += yVel; //add y velocity to y position
+        requestID = window.requestAnimationFrame(dvdLogo);
+    }
+    dvdLogo();
 }
 
 //var stopIt = function() {

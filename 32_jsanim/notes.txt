@@ -1,0 +1,15 @@
+Team Dark Lord Chuckles the Silly Pig :: Lauren Lee, Thomas Zhang, Diana Akhmedova  
+SoftDev pd7
+K32 -- canvas based JS drawing
+2023-04-26w
+
+DISCO:
+* preventDefault() prevents an action from being taken.
+    * In this case, preventDefault() affects the Animaniac and DVD buttons only since their functions invoke clear(), which has preventDefault().
+    * However, the stop button function does not invoke clear(), so it is not affected by preventDefault().
+* The canvas is like an inverted coordinate system and the logo is created from the top left.
+* The xVel and yVel served as a change in direction/slope, which allows us to create the illusion of a DVD logo bouncing off the walls of the canvas.
+
+QCC:
+* How can we make the logo not spawn on the edge?
+* Make sure to actually invoke the function after creating it or else nothing happens!
