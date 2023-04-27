@@ -9,6 +9,9 @@ var mode = "rect";
 
 var a = document.getElementById("buttonToggle");
 
+//e is event
+
+
 //var toggleMode = function(e) {
 var toggleMode = (e) => {
     console.log("toggling...");
