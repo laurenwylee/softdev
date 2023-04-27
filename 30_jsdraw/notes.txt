@@ -1,0 +1,12 @@
+Team Dark Lord Chuckles the Silly Pig :: Lauren Lee, Thomas Zhang, Diana Akhmedova  
+SoftDev pd7
+K30 -- canvas based JS drawing
+2023-04-24m
+
+DISCO:
+* function(e) is the same as (e) =>
+* offsetX/offsetY is a property of the MouseEvent interface and provides the offset in the X/Y coordinate of the mouse pointer between that event and the padding edge of the target node.
+* fillStyle specifies the color, gradient, or pattern to use inside shapes.
+
+QCC:
+* How can we make drawing on the canvas more continuous, where anything can be drawn by dragging your mouse?

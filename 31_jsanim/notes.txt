@@ -1,0 +1,14 @@
+Team Dark Lord Chuckles the Silly Pig :: Lauren Lee, Thomas Zhang, Diana Akhmedova
+SoftDev pd7
+K31 -- canvas based JS animation
+2023-04-25t
+
+DISCO:
+* window.requestAnimationFrame(function) requests that the browser calls the function to update an animation before the next frame.
+* window.cancelAnimationFrame(function) cancels/stops the request for the browser to repeatedly call the function. 
+* In order to create an animation, you have to clear the screen before painting every new frame.
+* To stop the function from being called multiple times in one frame, you have to call window.cancelAnimationFrame(function) before painting the next frame.
+
+QCC:
+* What is the purpose of the parameter e? It doesn't seem to affect anything.
+* Is the requestAnimationFrame() function stackable?

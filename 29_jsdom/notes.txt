@@ -1,0 +1,18 @@
+Team Dark Lord Chuckles the Silly Pig :: Lauren Lee, Thomas Zhang, Diana Akhmedova  
+SoftDev pd7
+K29 -- Getting more comfortable with the dev console and the DOM
+2023-04-20r
+
+DISCO:
+* In order to create a button that will output the inputs...
+    * Set the button equal to a variable using document.getElementById("buttonID").
+    * Create a function containing:
+        * Set the input text equal to a variable.
+        * Get the value of the input text (inputTextVar = inputTextVar.value).
+        * Get the innerHTML of the output text and set it equal to the output of the function.
+    * Lastly, add an event listener to the button that will run the function in the previous step on click.
+* We need to create a separate function in order to make buttons that will output something on click.
+
+QCC:
+* Why do we need '() => function()' as the second argument in the addEventListener() function?
+* We understood the basic idea, but it took a little bit to get all of the steps in the right order.
