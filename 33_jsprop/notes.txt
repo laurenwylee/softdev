@@ -1,0 +1,15 @@
+Team Dark Lord Chuckles the Silly Pig :: Lauren Lee, Thomas Zhang, Diana Akhmedova  
+SoftDev pd7
+K33 -- canvas based JS drawing
+2023-04-27t
+
+DISCO:
+* The third parameter of the addEventListener() determines whether the events occur in a bubbling or a capturing order.
+    * Bubbling Order: Starting from the inner tage and going to the outer tags.
+    * Capturing Order: Starting from the outer tags and going to the inner tags.
+* stopPropagation() runs a function once, and then stops the funtion from running again, even if it is called multiple times.
+* The <tr> and <td> alerts need for loops since there are multiple <tr> and <td> tags in the HTML file.
+  However, the <table> alert does not need a for loop since there is only one <table> tag.
+
+QCC:
+* The optional third parameter of addEventListener() has many options in which all are booleans. How does JS know which option the parameter is?
